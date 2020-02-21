@@ -8,15 +8,16 @@ namespace Senai.Peoples.WebApi.Properties.Interfaces
 {
     interface IFuncionarioRepository
     {
-
+        //retorna uma lista
         List<FuncionarioDomain> Listar();
-
-        FuncionarioDomain BuscarPorId(int id);
+        //insere um funcionario
+        void Inserir(FuncionarioDomain funcionario);
 
         void Deletar(int id);
-
-        void Atualizar(FuncionarioDomain funcionario);
-
-        void Inserir(int id);
+        
+        // Busca um funcionario através do id
+        FuncionarioDomain BuscarPorId(int id);
+      
+        void Atualizar( FuncionarioDomain funcionario);
     }
 }
